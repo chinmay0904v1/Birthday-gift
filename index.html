@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, My Love ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050014;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,0,128,.18), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(128,0,255,.18), transparent 30%);
+    pointer-events:none;
+    z-index:-2;
+}
+
+/* STARS */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:60px 20px;
+    position:relative;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+}
+
+.small-text{
+    letter-spacing:5px;
+    font-size:14px;
+    color:#ff9ecb;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(60px,10vw,120px);
+    color:#fff;
+    text-shadow:
+        0 0 10px #ff3b91,
+        0 0 30px #ff3b91,
+        0 0 60px #ff3b91;
+    animation:pulse 2s infinite alternate;
+}
+
+@keyframes pulse{
+    from{transform:scale(1);}
+    to{transform:scale(1.04);}
+}
+
+.hero h2{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(30px,5vw,55px);
+    margin-top:10px;
+    color:#ff9ecb;
+}
+
+.hero p{
+    margin-top:25px;
+    color:#ddd;
+    font-size:16px;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    font-size:13px;
+    color:#aaa;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(10px);}
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-section{
+    text-align:center;
+}
+
+.photo-frame{
+    width:min(330px,80vw);
+    height:min(430px,105vw);
+    border-radius:25px;
+    padding:6px;
+    background:linear-gradient(135deg,#ff3b91,#9b4dff,#ff3b91);
+    box-shadow:
+        0 0 30px rgba(255,59,145,.5),
+        0 0 80px rgba(155,77,255,.3);
+    transform:rotate(-2deg);
+    transition:.5s;
+}
+
+.photo-frame:hover{
+    transform:rotate(0deg) scale(1.03);
+}
+
+.photo-placeholder{
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    overflow:hidden;
+}
+
+
+
+.photo-section h2{
+    font-family:'Dancing Script',cursive;
+    font-size:50px;
+    margin-bottom:30px;
+}
+
+.caption{
+    margin-top:30px;
+    color:#ddd;
+    font-style:italic;
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter-section{
+    text-align:center;
+}
+
+.section-title{
+    font-family:'Dancing Script',cursive;
+    font-size:60px;
+    margin-bottom:35px;
+    color:#ff9ecb;
+}
+
+.letter{
+    max-width:750px;
+    padding:45px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+    line-height:2;
+    color:#eee;
+    font-size:16px;
+}
+
+.letter p{
+    margin-bottom:20px;
+}
+
+.signature{
+    font-family:'Dancing Script',cursive;
+    font-size:38px;
+    color:#ff8fc2;
+}
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    width:min(1000px,90%);
+}
+
+.reason{
+    padding:35px 25px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    text-align:center;
+    transition:.4s;
+}
+
+.reason:hover{
+    transform:translateY(-10px);
+    background:rgba(255,59,145,.1);
+    box-shadow:0 15px 40px rgba(255,59,145,.2);
+}
+
+.reason span{
+    font-size:45px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.reason h3{
+    margin-bottom:10px;
+    color:#ff9ecb;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.time-box{
+    width:100px;
+    padding:20px 10px;
+    border-radius:20px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.time-box strong{
+    display:block;
+    font-size:35px;
+    color:#ff8fc2;
+}
+
+.time-box span{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise-section{
+    text-align:center;
+}
+
+.gift{
+    font-size:120px;
+    cursor:pointer;
+    filter:drop-shadow(0 0 20px #ff3b91);
+    animation:giftBounce 1.5s infinite;
+}
+
+@keyframes giftBounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.gift:hover{
+    animation:none;
+    transform:scale(1.1);
+}
+
+#surprise{
+    display:none;
+    max-width:700px;
+    margin-top:30px;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,59,145,.1);
+    border:1px solid rgba(255,100,170,.3);
+    animation:appear 1.5s;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+#surprise h2{
+    font-family:'Dancing Script',cursive;
+    font-size:50px;
+    color:#ff9ecb;
+    margin-bottom:20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff3b91,#9b4dff);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,59,145,.4);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 40px rgba(255,59,145,.7);
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    pointer-events:none;
+    animation:floatHeart linear forwards;
+    z-index:10;
+}
+
+@keyframes floatHeart{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#888;
+}
+
+footer span{
+    color:#ff5b9d;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .section-title{
+        font-size:45px;
+    }
+
+    .letter{
+        padding:25px;
+        font-size:14px;
+    }
+
+    .time-box{
+        width:75px;
+    }
+
+    .time-box strong{
+        font-size:25px;
+    }
+
+}
+
+</style>
+</head>
+
+
+
+<body>
+    <style>
+        audio{
+            display: none;
+        }
+    </style>
+    
+    <div class="stars" id="stars"></div>
+
+
+    <audio controls autoplay loop>
+    <source src="4.mp3" type="audio/mp3">
+</audio>
+
+<!-- STARS -->
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="small-text">
+        A SPECIAL DAY FOR A SPECIAL PERSON My Bab
+    </div>
+
+    <h1>Happy Birthday</h1>
+
+    <h2>My Beautiful Girl Tulsi❤️</h2>
+
+    <p>
+        Today, the whole universe celebrates you ✨
+    </p>
+
+    <div class="scroll">
+        ↓ Scroll down, my love ↓
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO
+========================= -->
+
+<section class="photo-section">
+
+    <h2>The Girl Who Stole My Heart
+              MY bab  ❤️</h2>
+
+    <div class="photo-frame">
+
+        <div class="photo-placeholder">
+
+             <img src="2.jpg" 
+                 style="width:100%;height:100%;object-fit:cover;">
+
+           
+        </div>
+
+    </div>
+
+    <p class="caption">
+        "My favorite view will always be you." ❤️
+    </p>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="letter-section">
+
+    <h2 class="section-title">
+        A Letter For You 💌
+    </h2>
+
+    <div class="letter">
+
+        <p>
+            My love,
+        </p>
+
+        <p>
+            Today is not just another birthday.
+            Today is the day the world became a little
+            more beautiful because you were born. ❤️
+        </p>
+
+        <p>
+            I don't know if words will ever be enough
+            to explain how special you are to me.
+            But I want you to know that every moment
+            with you.
+        </p>
+
+        <p>
+            Your smile can change my entire day.
+            Your voice can make everything feel Gulu gulu.
+            And simply knowing that you're there
+            makes my world a little Good.
+        </p>
+
+        <p>
+            On your birthday, I wish you endless happiness,
+            beautiful memories, success in everything you do,
+            and a life filled with all the love you deserve.
+        </p>
+
+        <p>
+            And selfishly... I hope I get to be beside you
+            But it not possible because for paneer . 🥹❤️
+        </p>
+
+        <p class="signature">
+            Forever yours ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REASONS
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Why You're So Special 💕
+    </h2>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <span>😊</span>
+            <h3>Your Smile</h3>
+            <p>
+                Somehow your smile makes me shy and 
+                feel better.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>❤️</span>
+            <h3>Your Heart</h3>
+            <p>
+                You have one of the most beautiful
+                hearts I've ever known yaa blacky iykyk .
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>✨</span>
+            <h3>Your Personality</h3>
+            <p>
+                There is simply nobody else quite like you.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>🥰</span>
+            <h3>The Way You Care that i dont see but still</h3>
+            <p>
+                The little things you do mean more
+                than you know.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SURPRISE
+========================= -->
+
+
+
+
+
+<section class="surprise-section">
+
+    <h2 class="section-title">
+        One Last Surprise from yours kotti  🎁
+    </h2>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <p style="margin-top:20px;color:#aaa;">
+        Tap the gift ❤️
+    </p>
+
+    <div id="surprise">
+
+        <h2>I Love You ❤️</h2>
+
+        <p>
+            If I could give you one thing today,
+            it would be the ability to see yourself
+            through my eyes...
+        </p>
+
+        <br>
+
+        <p>
+            Because then you'd finally understand
+            just how incredibly special you are to me. 🥹
+        </p>
+
+        <br>
+
+        <p>
+            Happy Birthday, my beautiful girl Tulsi. 🎂❤️
+        </p>
+
+        <button onclick="createExplosion()">
+            💕 One More Click
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with <span>❤️</span> for the most special girl.
+
+</footer>
+
+
+<script>
+
+/* =========================
+   CREATE STARS
+========================= */
+
+const stars = document.getElementById("stars");
+
+for(let i = 0; i < 180; i++){
+
+    const star = document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 2 + "s";
+
+    star.style.opacity =
+        Math.random();
+
+    stars.appendChild(star);
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘",
+        "💝"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random()*5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+}
+
+setInterval(createHeart,800);
+
+
+/* =========================
+   GIFT
+========================= */
+
+function openGift(){
+
+    const surprise =
+        document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(()=>{
+            createHeart();
+        },i*50);
+
+    }
+}
+
+
+/* =========================
+   HEART EXPLOSION
+========================= */
+
+function createExplosion(){
+
+    for(let i=0;i<100;i++){
+
+        setTimeout(()=>{
+
+            const heart =
+                document.createElement("div");
+
+            heart.className="heart";
+
+            heart.innerHTML="❤️";
+
+            heart.style.left =
+                (40 + Math.random()*20) + "vw";
+
+            heart.style.bottom =
+                (30 + Math.random()*20) + "vh";
+
+            heart.style.fontSize =
+                (15 + Math.random()*35) + "px";
+
+            heart.style.animationDuration =
+                (2 + Math.random()*3) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },5000);
+
+        },i*20);
+
+    }
+
+}
+
+
+/* =========================
+   OPTIONAL COUNTDOWN
+========================= */
+
+/*
+   CHANGE THIS DATE TO HER BIRTHDAY.
+
+   Example:
+   August 30, 2026
+
+   Use:
+   "2026-08-30T00:00:00"
+*/
+
+const birthday =
+    new Date("2026-08-30T00:00:00").getTime();
+
+function updateCountdown(){
+
+    const now =
+        new Date().getTime();
+
+    const distance =
+        birthday - now;
+
+    if(distance <= 0){
+
+        document.getElementById("days").innerText="00";
+        document.getElementById("hours").innerText="00";
+        document.getElementById("minutes").innerText="00";
+        document.getElementById("seconds").innerText="00";
+
+        return;
+    }
+
+    const days =
+        Math.floor(distance/(1000*60*60*24));
+
+    const hours =
+        Math.floor(
+            (distance%(1000*60*60*24))/
+            (1000*60*60)
+        );
+
+    const minutes =
+        Math.floor(
+            (distance%(1000*60*60))/
+            (1000*60)
+        );
+
+    const seconds =
+        Math.floor(
+            (distance%(1000*60))/1000
+        );
+
+    document.getElementById("days").innerText =
+        String(days).padStart(2,"0");
+
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2,"0");
+}
+
+setInterval(updateCountdown,1000);
+
+updateCountdown();
+
+</script>
+
+</body>
+</html>
+
